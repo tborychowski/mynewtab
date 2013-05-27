@@ -1,0 +1,21 @@
+{
+	"name": "My New Tab",
+	"version": "1.3",
+	"description": "",
+	"manifest_version": 2,
+	"icons": { "128": "img/128.png" },
+
+	"chrome_url_overrides" : { "newtab": "home.html" },
+	"options_page": "settings.html",
+	"update_url": "http://herhor.info/chrome-apps/updates.xml",
+	"homepage_url": "http://herhor.info/chrome-apps/",
+
+	"permissions": [
+		"history",
+		"storage",
+		"management",
+		"chrome://favicon/",
+		"http://*/*",
+		"https://*/*"
+	]
+}

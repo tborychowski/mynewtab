@@ -1,4 +1,6 @@
-.chrome-apps {  text-align: center; position: absolute; bottom: 32px; left: 0; right: 0; box-sizing: border-box; }
+.chrome-apps {  text-align: center; position: absolute; bottom: 32px; left: 0; right: 0; box-sizing: border-box;
+	-webkit-transform: translate3d(0, 0, 0); z-index: 9;
+}
 .chrome-apps .chrome-app { width: 48px; height: 48px; margin: 0 20px; display: inline-block; box-sizing: border-box; transition: all 100ms;
 	background-repeat: no-repeat; background-size: 48px; background-position: center; opacity: .5;
 }

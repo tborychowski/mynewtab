@@ -6,6 +6,7 @@
 	_currentTab = null,
 	_apps = null,
 	_appsContainer = null,
+	_linksContainer = null,
 	_config = { html: null },
 
 	/*** HANDLERS *****************************************************************************************************/
@@ -32,6 +33,10 @@
 			appW = _appsContainer.find('.app').first().outerWidth(true) + 4,
 			newW = Math.floor(containerW / appW) * appW;
 		_appsContainer.width(newW);
+		
+		
+		var sections = _linksContainer.find('.link-section'), len = sections.length, w = Math.floor(100 / len);
+		while (len--) sections[len].style.width = w + '%';
 	},
 	/*** HANDLERS *****************************************************************************************************/
 
@@ -107,6 +112,7 @@
 	_reInit = function () {
 		_apps = $('#apps');
 		_appsContainer = $('#appsContainer');
+		_linksContainer = $('#linksContainer');
 
 		$('.bottom-pane, .bottom-bar').remove();
 		_apps.append(_getBottomBar()).after(_getBottomPaneHtml());

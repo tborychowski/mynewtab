@@ -4,13 +4,13 @@
 	var
 	form = null,
 	statusBox = null,
-	options = { url: '', lastUpdate: null },
+	options = { url: '', showApps: false, lastUpdate: null },
 
 	$ = function (id) { return document.getElementById(id); },
 
 	_save = function () {
-		var url = form.url.value;
-		options.url = url;
+		options.url = form.url.value;
+		options.showApps = form.showApps.checked;
 		chrome.storage.local.set(options);
 		statusBox.innerHTML = 'Options saved successfully.';
 		return false;
@@ -21,8 +21,12 @@
 		statusBox = $('status');
 
 		chrome.storage.local.get(null, function (cfg) {
-			if (cfg && cfg.url) options.url = cfg.url;
+			if (cfg) {
+				if (typeof cfg.url !== 'undefined') options.url = cfg.url;
+				if (typeof cfg.showApps !== 'undefined') options.showApps = cfg.showApps;
+			}
 			form.url.value = options.url;
+			form.showApps.checked = options.showApps;
 		});
 
 

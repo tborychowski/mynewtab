@@ -9,8 +9,10 @@
 	<div id="status"></div>
 	<form name="options" id="optionsForm">
 		<fieldset>
-			<label>HTML file location:</label><input name="url" size="60"><br>
-			<label></label><span>leave blank to use default</span>
+			<label for="url">HTML file location:</label><input id="url" size="60"><br>
+			<label></label><span>leave blank to use default</span><br><br>
+
+			<label for="showApps">Show Chrome Apps:</label><input id="showApps" type="checkbox"><br>
 		</fieldset>
 		<button type="submit">Save</button>
 	</form>
@@ -18,6 +20,7 @@
 <br><hr>
 <h3>Config file howto:</h3>
 <p>Create a html file with the sample format and upload it somewhere (ftp, dropbox).</p>
+<p>Icon reference: <a href="http://fortawesome.github.io/Font-Awesome/icons">FontAwesome</a></p>
 <textarea id="sampleContainer" class="sample">loading sample...</textarea>
 <p>or download the <a href="default.html">default.html</a></p>
 <script src="js/settings.js"></script>

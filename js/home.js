@@ -31,11 +31,16 @@
 		_appsContainer.width('auto');
 		var containerW = _appsContainer.innerWidth(),
 			appW = _appsContainer.find('.app').first().outerWidth(true) + 4,
-			newW = Math.floor(containerW / appW) * appW;
-		_appsContainer.width(newW);
-		
-		
-		var sections = _linksContainer.find('.link-section'), len = sections.length, w = Math.floor(100 / len);
+			newW = Math.floor(containerW / appW) * appW,
+			sections, len, w;
+
+		_appsContainer.outerWidth(newW);
+		_linksContainer.outerWidth(newW);
+
+		sections = _linksContainer.find('.link-section');
+		len = sections.length;
+		w = Math.floor(100 / len);
+
 		while (len--) sections[len].style.width = w + '%';
 	},
 	/*** HANDLERS *****************************************************************************************************/
@@ -77,7 +82,7 @@
 		html = html.replace(/<script.*?>.*?<\/script>/ig, '').replace('<html>', '').replace('</html>', '');
 		_config.html = html;
 		chrome.storage.local.set(_config);
-		$('html').html(html);
+		$('html')[0].innerHTML = html;
 		$('html style').after('<link rel="stylesheet" href="css/home-ext.css">');
 		_reInit();
 	},
@@ -118,7 +123,8 @@
 		_apps.append(_getBottomBar()).after(_getBottomPaneHtml());
 
 		chrome.history.search({ text: '', maxResults: 10, endTime: +(new Date()) }, _initRecentHistory);
-		chrome.management.getAll(_initChromeApps);
+
+		if (_config.showApps) chrome.management.getAll(_initChromeApps);
 
 		_initEvents();
 		_onResize();

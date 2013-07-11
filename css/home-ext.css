@@ -1,7 +1,9 @@
-.chrome-apps {  text-align: center; position: absolute; bottom: 32px; left: 0; right: 0; z-index: 9; box-sizing: border-box; -webkit-transform: translate3d(0, 0, 0); }
-.chrome-apps .chrome-app { width: 48px; height: 48px; margin: 0 20px; display: inline-block; opacity: .5; box-sizing: border-box; transition: all 100ms; background-repeat: no-repeat; background-size: 48px; background-position: center; }
-.chrome-apps .chrome-app:hover { -webkit-transform: scale(1.1); opacity: .9; }
-.chrome-apps .chrome-app:active { -webkit-transform: scale(0.9); opacity: .9; }
+.chrome-apps {  position: absolute; bottom: 0; left: 45px; right: 330px; z-index: 9; box-sizing: border-box; -webkit-transform: translate3d(0, 0, 0); }
+.chrome-apps .chrome-app { width: 32px; height: 32px; background-size: 32px; background-repeat: no-repeat; background-position: center;
+		margin: 0 20px 0 0; display: inline-block; opacity: .5; box-sizing: border-box; transition: all 100ms; vertical-align: middle;
+	}
+.chrome-apps .chrome-app:hover { opacity: 1; }
+.chrome-apps .chrome-app:active { -webkit-transform: scale(0.9); opacity: 1; }
 
 
 .bottom-bar { position: fixed; bottom: 0; right: 0; left: 0; padding: 8px 15px; box-sizing: border-box;	border-top: 1px solid #ccc; box-shadow: 0 1px 0 #fff inset; }

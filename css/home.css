@@ -8,12 +8,12 @@ body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
 	box-sizing: border-box; box-shadow: 0 5px 7px rgba(0,0,0,0.7); z-index: 10; transition: -webkit-transform .3s ease-out;
 	-webkit-touch-callout: none; -webkit-user-select: none; user-select: none; padding: 30px;
 }
-#apps .apps-wrapper {position: absolute;top: 0; bottom: 40px;overflow: hidden;overflow-y: auto;}
+#apps .apps-wrapper { position: absolute;top: 0; bottom: 40px;overflow: hidden;overflow-y: auto; }
 #apps .apps-wrapper::-webkit-scrollbar { width: 8px; background: #F0F0F0; }
 #apps .apps-wrapper::-webkit-scrollbar-thumb { background: #aaa; }
-#apps .apps-wrapper::-webkit-scrollbar-thumb:hover { background: #888; }			
+#apps .apps-wrapper::-webkit-scrollbar-thumb:hover { background: #888; }
 
-#appsContainer { margin: 0 auto; }
+#appsContainer { margin: 10px auto 0; }
 .app { width: 140px; height: 140px; margin: 15px; display: inline-block; vertical-align: top; border-radius: 3px;
 	background-size: 128px; background-repeat: no-repeat; background-position: center;
 	box-sizing: border-box; transition: all 100ms; -webkit-transform: translate3d(0, 0, 0);
@@ -22,10 +22,10 @@ body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
 .app:active { -webkit-transform: scale(0.9); }
 .app .app-name { display: none; }
 
-#linksContainer { margin: 0 auto; overflow: hidden; padding: 30px 0 10px 50px; box-sizing: border-box; }
-.link-section { border-left: 1px solid #CCC; margin: 20px 0 0 0; padding: 5px 10px 5px 15px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
+#linksContainer { margin: 0 auto; overflow: hidden; padding: 30px 0 10px 40px; box-sizing: border-box; }
+.link-section { border-left: 1px solid #CCC; margin: 20px 0 20px 0; padding: 5px 10px 5px 15px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
 .link-section-label { display: block; left: -5px; margin: 0; position: absolute; top: -25px; color: #aaa; text-shadow: 0 1px 0 #fff; font-weight: bold; }
-.link { display: block; color: #666; text-decoration: none; transition: all .2s; margin-bottom: 10px; }
+.link { float: left; clear: both; color: #666; text-decoration: none; transition: all .2s; margin-bottom: 10px; }
 .link:hover { color: #333; text-decoration: underline; }
 .link i { margin-right: 7px; text-decoration: none; }
 

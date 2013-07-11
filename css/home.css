@@ -23,11 +23,11 @@ body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
 .app .app-name { display: none; }
 
 #linksContainer { margin: 0 auto; overflow: hidden; padding: 30px 0 10px 40px; box-sizing: border-box; }
-.link-section { border-left: 1px solid #CCC; margin: 20px 0 20px 0; padding: 5px 10px 5px 15px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
+.link-section { border-left: 1px solid #CCC; margin: 20px 0 20px 0; padding: 5px 10px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
 .link-section-label { display: block; left: -5px; margin: 0; position: absolute; top: -25px; color: #aaa; text-shadow: 0 1px 0 #fff; font-weight: bold; }
 .link { float: left; clear: both; color: #666; text-decoration: none; transition: all .2s; margin-bottom: 10px; }
 .link:hover { color: #333; text-decoration: underline; }
-.link i { margin-right: 7px; text-decoration: none; }
+.link i { margin-right: 7px; text-decoration: none; width: 16px; display: inline-block !important; text-align: center; -webkit-transform: translateZ(0); }
 
 @media screen and (max-width:1024px) {
 	#apps { padding: 20px 10px; }

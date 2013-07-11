@@ -16,11 +16,11 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
 .app:active { -webkit-transform: scale(0.9); }
 .app .app-name { display: none; }
 #linksContainer { margin: 0 auto; overflow: hidden; padding: 30px 0 10px 40px; box-sizing: border-box; }
-.link-section { border-left: 1px solid #CCC; margin: 20px 0 20px 0; padding: 5px 10px 5px 15px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
+.link-section { border-left: 1px solid #CCC; margin: 20px 0 20px 0; padding: 5px 10px; position: relative; float: left; min-width: 140px; box-sizing: border-box; }
 .link-section-label { display: block; left: -5px; margin: 0; position: absolute; top: -25px; color: #aaa; text-shadow: 0 1px 0 #fff; font-weight: bold; }
 .link { float: left; clear: both; color: #666; text-decoration: none; transition: all .2s; margin-bottom: 10px; }
 .link:hover { color: #333; text-decoration: underline; }
-.link i { margin-right: 7px; text-decoration: none; }
+.link i { margin-right: 7px; text-decoration: none; width: 16px; display: inline-block !important; text-align: center; -webkit-transform: translateZ(0); }
 @media screen and (max-width:1024px) { #apps { padding: 20px 10px; } .app { background-size: 96px; width: 100px; height: 100px; margin: 15px; } }
 @media screen and (max-width:641px) { #apps { padding: 10px 0px; } .app { background-size: 64px; width: 70px; height: 70px; margin: 10px; }}
 </style>
@@ -44,7 +44,7 @@ html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
 			<a class="link" href="http://youtube.com"><i class="icon-youtube"></i>youtube.com</a>
 			<a class="link" href="http://github.com"><i class="icon-github"></i>github.com</a>
 			<a class="link" href="http://twitter.com"><i class="icon-twitter"></i>twitter.com</a>
-			<a class="link" href="http://facebook.com"><i class="icon-facebook"></i> facebook.com</a>
+			<a class="link" href="http://facebook.com"><i class="icon-facebook"></i>facebook.com</a>
 			<a class="link" href="http://flickr.com"><i class="icon-flickr"></i> flickr.com</a>
 		</div>
 		<div class="link-section">

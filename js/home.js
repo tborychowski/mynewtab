@@ -143,7 +143,10 @@
 			else chrome.tabs.create({ url: 'settings.html', index: _currentTab.index + 1 });
 
 			// retrieve from the server and replace local
-			$.get(_config.url || 'default.html').done(_replaceHtml);
+			$.get(_config.url || 'default.html').done(function (resp) {
+				resp = resp.replace(/<script.*?>.*?<\/script>/ig, '').replace('<html>', '').replace('</html>', '');
+				if (cfg.html !== resp) _replaceHtml(resp);
+			});
 		});
 	};
 

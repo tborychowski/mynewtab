@@ -1,4 +1,4 @@
 mynewtab
 ========
 
-Google Chrome New Tab Page replacement
+Google Chrome New Tab Page replacer

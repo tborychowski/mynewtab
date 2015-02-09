@@ -1,28 +1,25 @@
 <html>
 <head>
-	<title>MyNewTab - Options</title>
-	<link rel="stylesheet" href="css/settings.css">
+<title>MyNewTab - Options</title>
+<style>
+html,
+body { margin: 0; padding: 20px; font: 14px/1.6 helvetica, arial, sans-serif; background: #f5f5f5 url('../img/noise.png') 0 0 repeat; }
+.logo { float : right; }
+form { padding: 20px 0; }
+fieldset { border: 0; padding: 0; margin: 0 0 15px; }
+fieldset label { width : 180px; float: left; padding: 7px 0 0; line-height: 1; }
+fieldset input { line-height: 1; border: 1px solid #ccc; padding: 4px 5px; font: inherit; }
+#status { color: #999; }
+</style>
 </head>
 <body>
 	<div class="logo"><img src="img/128.png"></div>
 	<h1>MyNewTab</h1>
 	<div id="status"></div>
 	<form name="options" id="optionsForm">
-		<fieldset>
-			<label for="url">HTML file location:</label><input id="url" size="60"><br>
-			<label></label><span>leave blank to use default</span><br><br>
-
-			<label for="showApps">Show Chrome Apps:</label><input id="showApps" type="checkbox"><br>
-		</fieldset>
+		<fieldset><label for="url">HTML file location:</label><input id="url" size="60"><br></fieldset>
 		<button type="submit">Save</button>
 	</form>
-
-<br><hr>
-<h3>Config file howto:</h3>
-<p>Create a html file with the sample format and upload it somewhere (ftp, dropbox).</p>
-<p>Icon reference: <a href="http://fortawesome.github.io/Font-Awesome/icons">FontAwesome</a></p>
-<textarea id="sampleContainer" class="sample">loading sample...</textarea>
-<p>or download the <a href="default.html">default.html</a></p>
 <script src="js/settings.js"></script>
 </body>
 </html>

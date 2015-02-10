@@ -1,22 +1,27 @@
 /*global chrome */
-window.onload = function () {
+(function () {
 	'use strict';
-	var
-		form = null,
+	var form = null,
 		statusBox = null,
-		options = { url: '', lastUpdate: null };
-	form = document.getElementById('optionsForm');
-	statusBox = document.getElementById('status');
+		currentTab = null,
+		options = { url: '', lastUpdate: null },
+		submit = function () {
+			options.url = form.url.value;
+			chrome.storage.sync.set(options);
+			statusBox.innerHTML = 'Options saved successfully.';
+			if (currentTab) chrome.tabs.update(currentTab.id, { url: 'chrome://newtab' });
+			return false;
+		};
 
-	chrome.storage.local.get(null, function (cfg) {
-		options.url = cfg.url || '';
-		form.url.value = options.url;
-	});
+	window.onload = function () {
+		form = document.getElementById('optionsForm');
+		statusBox = document.getElementById('status');
 
-	form.onsubmit = function () {
-		options.url = form.url.value;
-		chrome.storage.local.set(options);
-		statusBox.innerHTML = 'Options saved successfully.';
-		return false;
+		chrome.storage.sync.get(null, function (cfg) {
+			options.url = cfg.url || '';
+			form.url.value = options.url;
+		});
+		chrome.tabs.getCurrent(function (tab) { currentTab = tab; });
+		form.onsubmit = submit;
 	};
-};
+}());

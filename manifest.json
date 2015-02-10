@@ -6,13 +6,6 @@
 	"icons": { "128": "img/128.png" },
 	"chrome_url_overrides" : { "newtab": "index.html" },
 	"options_page": "settings.html",
-	"update_url": "http://herhor.org/chrome-apps/updates.xml",
-	"homepage_url": "http://herhor.org/chrome-apps/",
-	"permissions": [
-        "tabs",
-		"storage",
-		"management",
-		"http://*/*",
-		"https://*/*"
-	]
+	"homepage_url": "https://github.com/tborychowski/mynewtab",
+	"permissions": [ "tabs", "storage" ]
 }
